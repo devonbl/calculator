@@ -6,7 +6,9 @@
   "main": "server.js",
 
   "dependencies": {
+    "bootstrap": "*",
     "connect": "*",
+    "less": "*",
     "serve-static": "*"
   },
   "devDependencies": {},

@@ -1,4 +1,26 @@
 calculator
 ==========
 
-sample app with jest and reactjs
+simple calculator app with reactjs. and soon tests with jest
+
+# Front-End
+
+## Dependencies
+
+- node.js
+- npm (installed with node)
+
+## Dev flow
+
+Build:
+
+  npm install
+
+Run:
+
+	npm start
+  (open at [http://localhost:3000](http://localhost:3000))
+
+Test:
+
+	npm test

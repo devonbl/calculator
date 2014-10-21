@@ -1,0 +1,22 @@
+{
+  "name": "devonbl-react-calculator",
+  "version": "0.0.1",
+  "description": "sample app with jest and reactjs",
+
+  "main": "server.js",
+
+  "dependencies": {
+    "connect": "*",
+    "serve-static": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devonbl/calculator"
+  },
+  "author": "devonbl"
+}

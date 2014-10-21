@@ -3,8 +3,6 @@ calculator
 
 simple calculator app with reactjs. and soon tests with jest
 
-# Front-End
-
 ## Dependencies
 
 - node.js

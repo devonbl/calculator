@@ -12,13 +12,14 @@ simple calculator app with reactjs. and soon tests with jest
 
 Build:
 
-  npm install
+    npm install
 
 Run:
 
-	npm start
-  (open at [http://localhost:3000](http://localhost:3000))
+    npm start
+
+(open at [http://localhost:3000](http://localhost:3000))
 
 Test:
 
-	npm test
+    npm test

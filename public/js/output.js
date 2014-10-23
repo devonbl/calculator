@@ -2,19 +2,82 @@
 /** @jsx React.DOM */
 var React = require('react');
 
-
-var DevPage = React.createClass({displayName: 'DevPage',
-
+var CalculatorButton = React.createClass({displayName: 'CalculatorButton',
+  getDefaultProps: function() {
+    return {
+      label: ""
+    }
+  },
   render: function() {
     return (
-      React.DOM.div(null, 
-        "test"
+      React.DOM.span({className: "btn btn-primary col-xs-3"}, 
+        this.props.label
       )
     )
   }
 });
 
-React.renderComponent(new DevPage(), document.getElementById("content"));
+var Calculator = React.createClass({displayName: 'Calculator',
+  getInitialState: function() {
+    return {
+      top: ['7', '8', '9', '/'],
+      second: ['4', '5', '6', '*'],
+      third: ['3', '2', '1', '-'],
+      last: ['C', '0', '+', '=']
+    }
+  },
+  render: function() {
+    return (
+      React.DOM.div({className: "panel-body container-fluid"}, 
+        React.DOM.div({className: "row"}, 
+          this.state.top.map(function(label){
+            return (
+              CalculatorButton({label: label})
+            )
+          })
+        ), 
+        React.DOM.div({className: "row"}, 
+          this.state.second.map(function(label){
+            return (
+              CalculatorButton({label: label})
+            )
+          })
+        ), 
+        React.DOM.div({className: "row"}, 
+          this.state.third.map(function(label){
+            return (
+              CalculatorButton({label: label})
+            )
+          })
+        ), 
+        React.DOM.div({className: "row"}, 
+          this.state.last.map(function(label){
+            return (
+              CalculatorButton({label: label})
+            )
+          })
+        )
+      )
+    )
+  }
+});
+
+var Panel = React.createClass({displayName: 'Panel',
+  render: function() {
+    return (
+      React.DOM.div({className: "container"}, 
+        React.DOM.div({className: "panel panel-default"}, 
+          React.DOM.div({className: "panel-heading"}, 
+            React.DOM.h3({className: "panel-title"}, "Calculator Fun Time!")
+          ), 
+          Calculator(null)
+        )
+      )
+    )
+  }
+});
+
+React.renderComponent(new Panel(), document.getElementById('content'));
 
 },{"react":146}],2:[function(require,module,exports){
 // shim for using process in browser

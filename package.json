@@ -10,6 +10,7 @@
     "consolidate": "*",
     "express": "*",
     "express-less": "*",
+    "font-awesome": "*",
     "less": "*",
     "mustache": "*",
     "react": "*",

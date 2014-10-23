@@ -7,12 +7,14 @@ simple calculator app with reactjs. and soon tests with jest
 
 - node.js
 - npm (installed with node)
+- grunt
 
 ## Dev flow
 
 Build:
 
     npm install
+    grunt browserify
 
 Run:
 

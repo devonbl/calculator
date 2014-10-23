@@ -7,11 +7,22 @@
 
   "dependencies": {
     "bootstrap": "*",
-    "connect": "*",
+    "consolidate": "*",
+    "express": "*",
+    "express-less": "*",
     "less": "*",
-    "serve-static": "*"
+    "mustache": "*",
+    "react": "*",
+    "winston": "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-react": "*",
+    "browserify": "*",
+    "grunt-browserify": "*",
+    "node-jsx": "*"
+  },
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"

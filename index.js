@@ -10,6 +10,8 @@ var CalculatorButton = React.createClass({
   calculate: function(evt) {
     var value = this.props.label,
         input = document.getElementById('calc-input');
+    //exceptions for clear and equal keys.  will still suck if
+    //you click = and then click a number.  TODO
     if (value === 'C'){
       input.value = '';
     } else if (value === '=') {
@@ -20,7 +22,7 @@ var CalculatorButton = React.createClass({
   },
   render: function() {
     return (
-      <span className='btn btn-primary col-xs-3' onClick={this.calculate}>
+      <span className={this.props.label + ' btn btn-primary col-xs-3'} onClick={this.calculate}>
         {this.props.label}
       </span>
     )
@@ -29,6 +31,7 @@ var CalculatorButton = React.createClass({
 
 var Calculator = React.createClass({
   getInitialState: function() {
+    //map over state probably too, skip duplicated code
     return {
       top: ['7', '8', '9', '/'],
       second: ['4', '5', '6', '*'],

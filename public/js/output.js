@@ -8,9 +8,20 @@ var CalculatorButton = React.createClass({displayName: 'CalculatorButton',
       label: ""
     }
   },
+  calculate: function(evt) {
+    var value = this.props.label,
+        input = document.getElementById('calc-input');
+    if (value === 'C'){
+      input.value = '';
+    } else if (value === '=') {
+      input.value = eval (input.value);
+    } else {
+      input.value += value;
+    }
+  },
   render: function() {
     return (
-      React.DOM.span({className: "btn btn-primary col-xs-3"}, 
+      React.DOM.span({className: "btn btn-primary col-xs-3", onClick: this.calculate}, 
         this.props.label
       )
     )
@@ -28,7 +39,10 @@ var Calculator = React.createClass({displayName: 'Calculator',
   },
   render: function() {
     return (
-      React.DOM.div({className: "panel-body container-fluid"}, 
+      React.DOM.div({className: "panel-body container-fluid calculator"}, 
+        React.DOM.div({className: "row"}, 
+          React.DOM.input({type: "text", disabled: true, id: "calc-input", className: "col-xs-12"})
+        ), 
         React.DOM.div({className: "row"}, 
           this.state.top.map(function(label){
             return (

@@ -8,6 +8,8 @@ simple calculator app with reactjs. and soon tests with jest
 - node.js
 - npm (installed with node)
 - grunt
+- grunt-cli
+- jest-cli --save-dev
 
 ## Dev flow
 

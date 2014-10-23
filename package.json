@@ -2,9 +2,7 @@
   "name": "devonbl-react-calculator",
   "version": "0.0.1",
   "description": "sample app with jest and reactjs",
-
   "main": "server.js",
-
   "dependencies": {
     "bootstrap": "*",
     "consolidate": "*",
@@ -14,19 +12,26 @@
     "less": "*",
     "mustache": "*",
     "react": "*",
+    "react-tools": "*",
     "winston": "*"
   },
   "devDependencies": {
-    "grunt": "*",
-    "grunt-react": "*",
     "browserify": "*",
+    "grunt": "*",
     "grunt-browserify": "*",
+    "grunt-react": "*",
+    "jest-cli": "^0.1.18",
     "node-jsx": "*"
   },
-
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js"
+  },
+  "jest": {
+    "scriptPreprocessor": "preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "node_modules/react"
+    ]
   },
   "repository": {
     "type": "git",
